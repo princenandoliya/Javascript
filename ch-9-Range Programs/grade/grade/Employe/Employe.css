@@ -1,47 +1,67 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #020024;
-background: linear-gradient(39deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-background-repeat: no-repeat;
+    text-align: center;
+    background-size: cover;
+    background-image: url(img/gradient-1770388177240.svg);
+    background-repeat: no-repeat;
+
 
 }
 
-#form{
+#form {
     text-align: center;
     padding: 90px;
     border-radius: 10px;
-    background: #22C1C3;
-background: linear-gradient(214deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    border: 15px double white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-#submit{
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 10px;
-}
-#Salary,#hra,#da,#ta{
+
+#Salary,
+#hra,
+#da,
+#ta {
     font-size: 15px;
     padding: 10px;
     border-radius: 10px;
 }
 
-button:hover{
-    transform: scale(1.1);
-    transition: all 0.5s;
-    
-}
-#result{
+#result {
     font-size: 20px;
     margin: 15px;
     padding: 10px;
-    border: 3px dashed black;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+ color: white;
     border-radius: 10px;
 }
+
+
+         #submit {background-image: linear-gradient(to right, #83a4d4 0%, #b6fbff  51%, #83a4d4  100%)}
+         #submit {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: black;           
+            /* box-shadow: 0 0 20px #eee; */
+            border-radius: 10px;
+            font-size: 15px;
+          }
+
+          #submit:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
