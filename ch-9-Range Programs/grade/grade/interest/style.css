@@ -1,0 +1,38 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: #2A7B9B;
+    background: linear-gradient(162deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background-repeat: no-repeat;
+
+}
+
+#form {
+    text-align: center;
+    padding: 90px;
+    border-radius: 10px;
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+#Amount,
+#time,
+#rate {
+    font-size: 15px;
+
+}
+
+#submit {
+    font-size: 20px;
+    padding: 9px;
+    border-radius: 10px;
+}
