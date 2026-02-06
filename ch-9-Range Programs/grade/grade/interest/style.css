@@ -10,8 +10,7 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    background: #2A7B9B;
-    background: linear-gradient(162deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background-image: url(img/55246.png);
     background-repeat: no-repeat;
 
 }
@@ -20,19 +19,52 @@ body {
     text-align: center;
     padding: 90px;
     border-radius: 10px;
-    background: #020024;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;      
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+#all {
+    font-size: 20px;
 }
 
 #Amount,
 #time,
-#rate {
-    font-size: 15px;
+#rate,
+#result {
+    font-size: 19px;
+    width: 400px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+
+
+
+#submit {
+    background-image: linear-gradient(to right, #4CA1AF 0%, #C4E0E5 51%, #4CA1AF 100%)
 
 }
 
 #submit {
-    font-size: 20px;
-    padding: 9px;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
     border-radius: 10px;
+    
+    color: black;
+}
+
+#submit:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
