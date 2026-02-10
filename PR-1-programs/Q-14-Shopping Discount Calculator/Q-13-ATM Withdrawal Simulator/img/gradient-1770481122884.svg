@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" preserveAspectRatio="none">
+            <!-- https://grabient.com/HQVgHAbANKAMAsMQHYRIEwEYb3rJAzNsActMPMvifMSOgUrI6BJkA?style=linearSwatches&angle=315&steps=5 -->
+            <defs>
+              <clipPath id="bounds">
+                <rect x="0" y="0" width="800" height="400" />
+              </clipPath>
+            </defs>
+            <g clip-path="url(#bounds)"><path d="M 1016.228,183.772 L 383.772,816.228 L 263.772,696.228 L 896.228,63.772 Z" fill="#121015" fill-opacity="1.000" /><path d="M 896.228,63.772 L 263.772,696.228 L 143.772,576.228 L 776.228,-56.228 Z" fill="#332f40" fill-opacity="1.000" /><path d="M 776.228,-56.228 L 143.772,576.228 L 23.772,456.228 L 656.228,-176.228 Z" fill="#757883" fill-opacity="1.000" /><path d="M 656.228,-176.228 L 23.772,456.228 L -96.228,336.228 L 536.228,-296.228 Z" fill="#c2c6ca" fill-opacity="1.000" /><path d="M 536.228,-296.228 L -96.228,336.228 L -216.228,216.228 L 416.228,-416.228 Z" fill="#ffefff" fill-opacity="1.000" /></g>
+          </svg>

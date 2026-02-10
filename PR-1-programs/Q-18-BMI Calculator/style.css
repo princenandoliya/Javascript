@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/gradient-1770652760983.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#form {
+    border-radius: 40px;
+    padding: 60px;
+    background-color: #ffffff57;
+
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+
+#label,
+#result {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#weight,
+#height {
+    font-size: 20px;
+}
+
+
+
+#btn {
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)
+}
+
+#btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+
+}
+
+#btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" preserveAspectRatio="none">
+            <!-- https://grabient.com/AwGloWgRgOmeTTgiMBsUBMIYE58764iZ64AcOw5UYdMArAowrPOEA?style=angularSwatches&angle=135&steps=5 -->
+            <defs>
+              <clipPath id="squareClip">
+                <rect x="0" y="0" width="800" height="400" />
+              </clipPath>
+              <filter id="antiGap">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+              </filter>
+            </defs>
+            <g clip-path="url(#squareClip)" filter="url(#antiGap)" shape-rendering="crispEdges">
+          <path d="
+              M 400.000,200.000
+              L 716.228,516.228
+              A 447.214,447.214 0 0 1 196.969,598.471
+              Z
+            " fill="#100031" fill-opacity="1.000" /><path d="
+              M 400.000,200.000
+              L 196.969,598.471
+              A 447.214,447.214 0 0 1 -41.708,130.040
+              Z
+            " fill="#bd7f80" fill-opacity="1.000" /><path d="
+              M 400.000,200.000
+              L -41.708,130.040
+              A 447.214,447.214 0 0 1 330.040,-241.708
+              Z
+            " fill="#efffce" fill-opacity="1.000" /><path d="
+              M 400.000,200.000
+              L 330.040,-241.708
+              A 447.214,447.214 0 0 1 798.471,-3.031
+              Z
+            " fill="#42807f" fill-opacity="1.000" /><path d="
+              M 400.000,200.000
+              L 798.471,-3.031
+              A 447.214,447.214 0 0 1 716.228,516.228
+              Z
+            " fill="#100031" fill-opacity="1.000" /></g>
+        </svg>

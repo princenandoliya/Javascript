@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 80vh;
+    background-image: url(img/gradient-1770435588836.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form {
+    border: 15px double white;
+    padding: 60px;
+    border-radius: 40px;
+    
+}
+
+#label {
+    color: white;
+    font-size: 20px;
+}
+
+#Number1,
+#Number2,
+#Number3 {
+    font-size: 15px;
+}
+
+#submit {
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%)
+}
+
+#submit {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 10 0 20px #eee;
+    border-radius: 10px;
+
+}
+
+#submit:hover {
+    background-position: right center;
+    
+    color: #fff;
+    text-decoration: none;
+}
+#result{
+    color: white;
+    font-size: 16px;
+}

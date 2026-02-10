@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    background-image: url(img/gradient-1770432836374.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form {
+    border-radius: 20px;
+    padding: 60px;
+    height: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+}
+
+#submit {
+    font-size: 15px;
+}
+
+#btn {
+    background-image: linear-gradient(to right, #abbaab 0%, #ffffff 51%, #abbaab 100%)
+}
+
+#btn {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    
+}
+
+#btn:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
