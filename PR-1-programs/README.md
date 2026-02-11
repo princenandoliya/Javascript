@@ -28,7 +28,7 @@ Q-14 = https://shoping101.netlify.app/
 
 Q-15 =  https://temperature101.netlify.app/
 
-Q-16 = 
+Q-16 = https://curency101.netlify.app/
 
 Q-17 = https://traffic101.netlify.app/
 
