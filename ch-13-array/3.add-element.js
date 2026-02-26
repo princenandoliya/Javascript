@@ -49,3 +49,25 @@ bike.shift()
 console.log(bike.length,bike)
 
 
+//splice
+//The splice() method is used to remove, add, or replace elements in an array.
+//It modifies (changes) the original array.
+
+console.log("bike elements and their length",bike.length,bike)
+
+
+// Adding new items to the bike array from the second position
+bike.splice(2,0, "r15","ktm")
+console.log(bike.length,bike)
+
+
+// Removing specific elements from the bike array
+console.log("bike elements and their length",bike.length,bike)
+bike.splice(2,3)
+console.log(bike.length,bike)
+
+
+// Replacing an element in the bike array at a specific index using splice()
+console.log("bike elements and their length",bike.length,bike)
+bike.splice(2,1, "zx10r")
+console.log(bike.length,bike)
