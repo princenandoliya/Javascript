@@ -1,40 +1,40 @@
 
-function selectProduct(callback){
+function  selectMovie(callback){
     setTimeout(()=>{
-        console.log("product selected")
+        console.log("Movie selected:")
          callback();
     },1000)
    
 }
 
-function addToCart(callback){
+function  bookTicket(callback){
     setTimeout(()=>{
-        console.log("Added To cart")
+        console.log("Ticket booked for Movie")
          callback();
     },1000)
    
 }
 
-function PaymentDone(callback){
+function makePayment(callback){
     setTimeout(()=>{
-        console.log("Payment Done")
+        console.log("Payment done for Movie")
          callback();
        },1000)
 }
 
-function Delivery(callback){
+function watchMovie(callback){
     setTimeout(()=>{
-        console.log("order delivery")
+        console.log("Watching Movie")
          callback();
     },1000)
 }
 
-selectProduct(()=>{
-    addToCart(()=>{
-        PaymentDone(()=>{
-            Delivery(()=>{
+selectMovie(()=>{
+    bookTicket(()=>{
+        makePayment(()=>{
+            watchMovie(()=>{
                setTimeout(()=>{
-                 console.log("order complete")
+                 console.log("Enjoy the show 🍿")
                },2000)
             })
         })
