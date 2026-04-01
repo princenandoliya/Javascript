@@ -1,4 +1,4 @@
-const product = [
+const products = [
   {
     id: 1,
     name: "Wireless Headphones",
@@ -89,9 +89,9 @@ const product = [
     price: 8999,
     img: "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg"
   }
-];;
+];
 
-product.forEach((a)=>{
+products.forEach((a)=>{
     const productlist = document.getElementById("productlist")
 
     productlist.innerHTML +=`
@@ -100,10 +100,82 @@ product.forEach((a)=>{
   <img src="${a.img}" class="card-img-top rounded-4" alt="${a.name}">
   <div class="card-body text-center">
     <h5 class="card-title">${a.name}</h5>
+    <h3 class="fw-bold text-success">₹${a.price}</h3>
    
-    <button class="btn btn-outline-primary">Add To Cart</button>
+    <button class="btn btn-outline-primary" onclick="addTocart(${a.id})">Add To Cart</button>
   </div>
 </div>
     </div>
     `
 })
+
+//local storage concept
+
+// const data = {name: "electronic",qty: 1}
+
+// localStorage.setItem("cartdata",JSON.stringify(data))
+
+// const productdata = localStorage.getItem("cartdata")
+
+// console.log("productdata",JSON.parse(productdata))
+
+const cartItems = JSON.parse(localStorage.getItem("cartdata")) || []
+
+console.log("cartItems",cartItems)
+
+function addTocart(id){
+  try {
+    let product = cartItems.find((prod)=>prod.id === id);
+
+    if (product) {
+      product.qty++;
+      
+    } else {
+      product = products.find((prod)=> prod.id === id)
+      cartItems.push({...product, qty: 1})
+      
+    }
+
+
+    localStorage.setItem("cartdata",JSON.stringify(cartItems))
+    
+  } catch (error) {
+    console.log(error)
+  } 
+}
+
+ function showModal(){
+    const cartItemslist = document.getElementById("cartItem-list")
+
+    let modal = new bootstrap.Modal(cartItemslist)  
+    modal.show()
+    showCartData()
+}
+
+function showCartData(){
+  try {
+    
+    const cartIlist = document.getElementById("carttable")
+    cartIlist.innerHTML = ""
+
+    cartItems.forEach((a)=>{
+      cartIlist.innerHTML += `
+      <tr>
+      <td>${a.name} </td>
+      <td>
+      <div class="d-flex gap-3">
+      <button class = "btn btn-outline-success">+</button>
+      <h4>${a.qty}</h4>
+      <button class = "btn btn-outline-danger">-</button>
+      </div>
+      </td>
+      <td>₹${a.qty *a.price}</td>
+      <td><button class = "btn btn-outline-danger">Remove</button></td>
+      </tr>`
+    })
+
+
+  } catch (error) {
+    
+  }
+}
