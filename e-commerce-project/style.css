@@ -3,10 +3,17 @@
     padding: 0px;
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(153, 186, 216);
+}
 .product-card{
     min-height: 400px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
 .product-card img{
     height: 350px;
+}
+.modal-dialog{
+    min-width: fit-content;
 }
