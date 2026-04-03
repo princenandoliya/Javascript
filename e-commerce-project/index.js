@@ -1,3 +1,4 @@
+
 const products = [
   {
     id: 1,
@@ -142,6 +143,8 @@ function addTocart(id){
   } catch (error) {
     console.log(error)
   } 
+
+  alert("product added successfully")
 }
 
  function showModal(){
@@ -161,6 +164,8 @@ function showCartData(){
     cartItems.forEach((a)=>{
       cartIlist.innerHTML += `
       <tr>
+      <td>
+<img src="${a.img}" style="width: 70px" alt=""></td>
       <td>${a.name} </td>
       <td>
       <div class="d-flex gap-3">
