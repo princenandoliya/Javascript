@@ -119,7 +119,7 @@ products.forEach((a)=>{
 
 // console.log("productdata",JSON.parse(productdata))
 
-const cartItems = JSON.parse(localStorage.getItem("cartdata")) || []
+let cartItems = JSON.parse(localStorage.getItem("cartdata")) || []
 
 console.log("cartItems",cartItems)
 
@@ -164,13 +164,13 @@ function showCartData(){
       <td>${a.name} </td>
       <td>
       <div class="d-flex gap-3">
-      <button class = "btn btn-outline-success">+</button>
+      <button class = "btn btn-outline-success"  onclick="increase(${a.id})">+</button>
       <h4>${a.qty}</h4>
-      <button class = "btn btn-outline-danger">-</button>
+      <button class = "btn btn-outline-danger"  onclick="decrease(${a.id})">-</button>
       </div>
       </td>
       <td>₹${a.qty *a.price}</td>
-      <td><button class = "btn btn-outline-danger">Remove</button></td>
+      <td><button class = "btn btn-outline-danger" onclick="remove(${a.id})">Remove</button></td>
       </tr>`
     })
 
@@ -178,4 +178,42 @@ function showCartData(){
   } catch (error) {
     
   }
+}
+
+function increase (id){
+  const product = cartItems.find((a)=> a.id === id);
+
+  if(product){
+    product.qty++;
+  }
+  updateLatestData();
+}
+
+function updateLatestData(){
+  localStorage.setItem("cartdata",JSON.stringify(cartItems))
+
+  showCartData()
+}
+
+function decrease (id){
+  const product = cartItems.find((a)=> a.id === id)
+
+  if(product){
+    product.qty--;
+  }
+  if(product.qty <= 0){
+    cartItems = cartItems.filter((a)=> a.id !== id)
+
+  }
+
+
+    updateLatestData();
+}
+
+function remove(id){
+  cartItems = cartItems.filter((a)=> a.id !== id)
+
+  
+    updateLatestData();
+
 }
