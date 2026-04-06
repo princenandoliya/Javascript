@@ -1,4 +1,3 @@
-
 const products = [
   {
     id: 1,
@@ -152,7 +151,7 @@ function addTocart(id){
 
     let modal = new bootstrap.Modal(cartItemslist)  
     modal.show()
-    showCartData()
+    updateLatestData()
 }
 
 function showCartData(){
@@ -198,6 +197,7 @@ function updateLatestData(){
   localStorage.setItem("cartdata",JSON.stringify(cartItems))
 
   showCartData()
+  total()
 }
 
 function decrease (id){
@@ -222,3 +222,86 @@ function remove(id){
     updateLatestData();
 
 }
+function total(){
+  const total = document.getElementById("total")
+
+  const totalAmount = cartItems.reduce((acc,curr)=>{
+     return (acc += curr.price * curr.qty);
+  },0)
+
+  total.innerHTML = `<h4>₹${totalAmount}</h4>`
+}
+
+  function checkout(){
+    if( cartItems.length === 0){
+      alert("no items in cart add some items to  check out")
+    }else{
+      alert("order placed successfully")
+
+      cartItems = [];
+      updateLatestData();
+    }
+
+
+  }
+
+  function showModal1(){
+    const additems = document.getElementById("additems")
+    const modal = new bootstrap.Modal(additems)
+    modal.show();
+  }
+
+  function addnewproduct(){
+    let name = document.getElementById("name").value
+    let price = document.getElementById("Price").value
+    let img = document.getElementById("img").value
+
+    if(!name || !price || !img){
+      alert("All Field Required");
+      return;
+    }
+
+    let newProduct = {
+      id: Date.now(),
+      name,
+      price,
+      img
+    }
+
+    products.push(newProduct);
+    localStorage.setItem("products",JSON.stringify(products))
+
+
+    displayproducts();
+
+    alert("product added")
+
+    let modal = bootstrap.Modal.getInstance(document.getElementById("additems"))
+    modal.hide();
+  }
+
+
+
+
+function displayproducts() {
+
+  let productContainer = document.getElementById("productlist");
+  productContainer.innerHTML = "";
+
+  products.forEach((a) => {
+    productContainer.innerHTML += `
+      <div class="col-md-4 mt-3">
+    <div class="card product-card rounded-4">
+  <img src="${a.img}" class="card-img-top rounded-4" alt="${a.name}">
+  <div class="card-body text-center">
+    <h5 class="card-title">${a.name}</h5>
+    <h3 class="fw-bold text-success">₹${a.price}</h3>
+   
+    <button class="btn btn-outline-primary" onclick="addTocart(${a.id})">Add To Cart</button>
+  </div>
+</div>
+    </div>
+    `;
+  });
+};
+
