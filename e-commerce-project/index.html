@@ -110,11 +110,39 @@
       </div>
     </div>
   </div>
- 
 
-  
-  
+  <div class="modal fade" id="updateproductModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            update product Detail
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" id="updateProductForm">
+            <label class="form-label fw-bold">Name</label>
+            <input type="text" id="updateproductname" class="form-control mb-2" placeholder="product name" required />
+            <label class="form-label fw-bold">price</label>
+            <input type="number" id="updateroductprice" class="form-control mb-2" placeholder="product price"
+              required />
+               <label class="form-label fw-bold">img</label>
+            <input type="text" id="updateproductimg" class="form-control mb-2" placeholder="image URL" required />
 
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                update product
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
