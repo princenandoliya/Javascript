@@ -321,6 +321,51 @@ function deletproduct(id) {
 
 }
 
+function updateproductModal(id) {
+  const updateproductModal = document.getElementById("updateproductModal")
+
+  let modal = new bootstrap.Modal(updateproductModal)
+
+  modal.show()
+
+  const product = products.find((a) => a.id === id)
+
+  if (!product) {
+    alert("product not found")
+    return;
+  }
+
+
+  let index = products.findIndex((a) => a.id === id)
+
+  if (index === -1) {
+    alert("product not found")
+    return;
+  }
+
+  document.getElementById("updateproductname").value = products[index].name
+  document.getElementById("updateroductprice").value = products[index].price
+  document.getElementById("updateproductimg").value = products[index].img
+
+  document.getElementById("updateProductForm").addEventListener("submit",(e)=>{
+    e.preventDefault();
+
+    let name = document.getElementById("updateproductname").value
+    let price = document.getElementById("updateroductprice").value
+    let img = document.getElementById("updateproductimg").value
+
+    products[index]={
+      ...products,
+      name,
+      price,
+      img,
+    };
+
+    modal.hide()
+
+    displayproducts();
+  })
+}
 
 
 
