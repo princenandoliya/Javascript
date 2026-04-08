@@ -347,15 +347,20 @@ function updateproductModal(id) {
   document.getElementById("updateroductprice").value = products[index].price
   document.getElementById("updateproductimg").value = products[index].img
 
-  document.getElementById("updateProductForm").addEventListener("submit",(e)=>{
+
+  const form = document.getElementById("updateProductForm")
+  form.onsubmit = function (e) {
+
+
     e.preventDefault();
+
 
     let name = document.getElementById("updateproductname").value
     let price = document.getElementById("updateroductprice").value
     let img = document.getElementById("updateproductimg").value
 
-    products[index]={
-      ...products,
+    products[index] = {
+      ...products[index],
       name,
       price,
       img,
@@ -364,8 +369,11 @@ function updateproductModal(id) {
     modal.hide()
 
     displayproducts();
-  })
+  };
+
 }
+
+
 
 
 
