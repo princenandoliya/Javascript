@@ -109,6 +109,7 @@ let quiz = [
     ],
     correctIndex: 2
   }
+
 ];
 
 let qnsno = document.getElementById("qnsno")
@@ -116,40 +117,73 @@ let next = document.getElementById("next")
 
 
 let qnscounter = 1;
-
+let score = 0;
 let index = 0;
+let ans = null;
 
 
-function nextqns(){
-    let qns = document.getElementById("qns");
-    let options = document.getElementById("options")
-    
-    qns.innerHTML = quiz[index].question;
-    options.innerHTML = "";
+function loadqns() {
+  let qns = document.getElementById("qns");
+  let options = document.getElementById("options")
+
+  qns.innerHTML = quiz[index].question;
+  options.innerHTML = "";
 
 
-    quiz[index].options.forEach((opn)=>{
+  quiz[index].options.forEach((opn, index) => {
 
-        let div = document.createElement("div")
-        div.classList.add("col-8","mb-3","mx-auto")
+    let div = document.createElement("div")
+    div.classList.add("col-6", "mb-3", "mx-auto")
 
-        let btn = document.createElement("button")
-        btn.innerText = opn;
+    let btn = document.createElement("button")
+    btn.innerText = opn;
 
-        btn.classList.add("p-2","btn","option-btn","w-100")
-        btn.style.minHeight = "50px"
-
-
-        div.appendChild(btn)
-        options.appendChild(div)
-
-        qnsno.innerHTML = `question: ${qnscounter}/10`
-    });
+    btn.classList.add("p-2", "btn", "option-btn", "w-100")
+    btn.style.minHeight = "50px"
+    btn.addEventListener("click", () => {
+      ans = index;
+      nextqns()
+    })
 
 
-    index++;
-    qnscounter++;
+    div.appendChild(btn)
+    options.appendChild(div)
+
+  });
+
+
+
+
+}
+loadqns()
+
+
+
+function nextqns() {
+
+
+  if (ans === quiz[index].correctIndex) {
+    score++;
+  }
+  index++;
+  qnscounter++;
+  if (index < quiz.length) {
+
+    qnsno.innerHTML = `question: ${qnscounter}/${quiz.length}`
+    loadqns()
+
+  } else {
+
+    showscore()
+  }
+
+
+
 }
 
 
-nextqns()
+function showscore() {
+  qns.innerHTML = `
+  your score is : ${score}/${quiz.length}`;
+  options.innerHTML = "";
+}
