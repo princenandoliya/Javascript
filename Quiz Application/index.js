@@ -1,3 +1,5 @@
+
+
 let quiz = [
   {
     id: 1,
@@ -119,12 +121,14 @@ let next = document.getElementById("next")
 let qnscounter = 1;
 let score = 0;
 let index = 0;
-let ans = null;
+let selecteans = null;
 
 
 function loadqns() {
   let qns = document.getElementById("qns");
   let options = document.getElementById("options")
+
+  selecteans = null;
 
   qns.innerHTML = quiz[index].question;
   options.innerHTML = "";
@@ -141,7 +145,7 @@ function loadqns() {
     btn.classList.add("p-2", "btn", "option-btn", "w-100")
     btn.style.minHeight = "50px"
     btn.addEventListener("click", () => {
-      ans = index;
+      selecteans = index;
       nextqns()
     })
 
@@ -157,12 +161,16 @@ function loadqns() {
 }
 loadqns()
 
-
+let userans = [];
 
 function nextqns() {
 
+  userans.push(
+    selecteans !== null ? selecteans : null
+  );
 
-  if (ans === quiz[index].correctIndex) {
+
+  if (selecteans === quiz[index].correctIndex) {
     score++;
   }
   index++;
@@ -174,7 +182,7 @@ function nextqns() {
 
   } else {
 
-    showscore()
+    showresult()
   }
 
 
@@ -182,8 +190,49 @@ function nextqns() {
 }
 
 
-function showscore() {
-  qns.innerHTML = `
-  your score is : ${score}/${quiz.length}`;
+function showresult() {
+  next.classList.add("d-none"); // ✅ fix
+
+  let qns = document.getElementById("qns");
+  let options = document.getElementById("options");
+
+  qns.innerHTML = `Your Score is : ${score}/${quiz.length}`;
   options.innerHTML = "";
+
+  let qnsHTML = document.getElementById("qnsresult");
+  qnsHTML.innerHTML = "";
+
+  quiz.forEach((qns, index) => {
+
+    let usersans =
+      userans[index] !== null
+        ? qns.options[userans[index]]
+        : "Not Attempted";
+
+    let container = document.createElement("div");
+    container.classList.add("text-start");
+
+    let qnsShow = document.createElement("h3");
+    qnsShow.innerText = `${index + 1}. ${qns.question}`;
+    qnsShow.classList.add("mt-5", "mb-3");
+
+    let correctAnswer = document.createElement("p");
+    correctAnswer.innerText = `Correct Ans : ${qns.options[qns.correctIndex]}`;
+    correctAnswer.classList.add("text-success", "mt-2");
+
+    let selectedAnswer = document.createElement("p");
+    selectedAnswer.innerText = `Your Ans : ${usersans}`;
+
+    if (userans[index] === qns.correctIndex) {
+      selectedAnswer.classList.add("text-success");
+    } else {
+      selectedAnswer.classList.add("text-danger");
+    }
+
+    container.appendChild(qnsShow);
+    container.appendChild(correctAnswer);
+    container.appendChild(selectedAnswer);
+
+    qnsHTML.appendChild(container);
+  });
 }
