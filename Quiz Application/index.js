@@ -191,7 +191,7 @@ function nextqns() {
 
 
 function showresult() {
-  next.classList.add("d-none"); // ✅ fix
+  next.classList.add("d-none"); 
 
   let qns = document.getElementById("qns");
   let options = document.getElementById("options");
@@ -210,7 +210,7 @@ function showresult() {
         : "Not Attempted";
 
     let container = document.createElement("div");
-    container.classList.add("text-start");
+  
 
     let qnsShow = document.createElement("h3");
     qnsShow.innerText = `${index + 1}. ${qns.question}`;
@@ -218,15 +218,15 @@ function showresult() {
 
     let correctAnswer = document.createElement("p");
     correctAnswer.innerText = `Correct Ans : ${qns.options[qns.correctIndex]}`;
-    correctAnswer.classList.add("text-success", "mt-2");
+    correctAnswer.classList.add("text-white", "mt-2");
 
     let selectedAnswer = document.createElement("p");
     selectedAnswer.innerText = `Your Ans : ${usersans}`;
 
     if (userans[index] === qns.correctIndex) {
-      selectedAnswer.classList.add("text-success");
+      selectedAnswer.classList.add("text-white");
     } else {
-      selectedAnswer.classList.add("text-danger");
+      selectedAnswer.classList.add("text-dark");
     }
 
     container.appendChild(qnsShow);
