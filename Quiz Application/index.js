@@ -116,15 +116,22 @@ let quiz = [
 
 let qnsno = document.getElementById("qnsno")
 let next = document.getElementById("next")
+let timer = document.getElementById("timer")
 
 
 let qnscounter = 1;
 let score = 0;
 let index = 0;
 let selecteans = null;
+let Timerleft = 30;
+let interval;
+let container = document.getElementById("container")
 
 
 function loadqns() {
+         
+      time()
+
   let qns = document.getElementById("qns");
   let options = document.getElementById("options")
 
@@ -191,10 +198,13 @@ function nextqns() {
 
 
 function showresult() {
-  next.classList.add("d-none"); 
+  next.classList.add("d-none");
 
   let qns = document.getElementById("qns");
   let options = document.getElementById("options");
+
+  container.style.marginTop = "750px"
+  timer.style.display="none"
 
   qns.innerHTML = `Your Score is : ${score}/${quiz.length}`;
   options.innerHTML = "";
@@ -235,4 +245,24 @@ function showresult() {
 
     qnsHTML.appendChild(container);
   });
+}
+
+
+function time (){
+    clearInterval(interval);
+    Timerleft = 30;
+
+    timer.innerHTML = `Time left : ${Timerleft}`
+
+    interval = setInterval(()=>{
+      Timerleft--;      
+
+      timer.innerHTML = `Time left :${Timerleft}`
+
+      if(Timerleft < 0){
+        nextqns()
+        selecteans = null
+      }
+    },1000)
+
 }
