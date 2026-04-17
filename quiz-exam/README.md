@@ -73,13 +73,8 @@ Each question follows this structure:
 }
 ```
 
----
 
-## ⚠️ Current Limitations
 
-* ❌ No score tracking
-* ❌ No correct/incorrect answer feedback
-* ❌ No result screen
 * ❌ No option highlighting
 
 ---
@@ -96,7 +91,7 @@ Each question follows this structure:
 
 ## 👨‍💻 Author
 
-Created as a beginner-friendly JavaScript project for learning DOM manipulation and event handling.
+prince
 
 ---
 
