@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card w-100 align-items-center mt-4" id="cart">
+            <h1>Array Method</h1><br><br>
+            <div class="d-flex gap-1">
+                <input type="number" placeholder="Enter A Number" id="price">
+                <button class="btn btn-outline-primary" id="btn1" onclick="star()">add number</button>
+            </div><br><br><br>
+            <div class="w-75 d-flex flex-wrap justify-content-center" id="inp1"></div>
+            <button class="btn btn-outline-info" onclick="loadArray()" >convert array</button>
+            <div id="arrayoutput"></div>
+
+            <div class="gap-4 d-flex flex-wrap justify-content-center mt-3">
+                <button class="btn btn-outline-info" onclick="pushMethod()">push method</button>
+                <button class="btn btn-outline-info">pop method</button>
+                <button class="btn btn-outline-info">shfit method </button>
+
+                <button class="btn btn-outline-info">unshift method</button>
+                <button class="btn btn-outline-info">slice method</button>
+                <button class="btn btn-outline-info">some method </button>
+
+                
+                <button class="btn btn-outline-info">reverse method</button>
+                <button class="btn btn-outline-info">indexOf method</button>
+                <button class="btn btn-outline-info">includes method </button>
+
+
+                <button class="btn btn-outline-info">sort method</button>
+                <button class="btn btn-outline-info">descending method</button>
+                <button class="btn btn-outline-info">find method </button>
+
+
+                <button class="btn btn-outline-info">map method</button>
+                <button class="btn btn-outline-info">filter method</button>
+                <button class="btn btn-outline-info">reduce method </button>
+            </div><br>
+            <div id="output" class="mt-4 text-center fw-bold"></div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
