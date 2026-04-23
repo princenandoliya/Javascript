@@ -32,7 +32,7 @@ project-folder/
 
 🚀 Getting Started
 Clone the repository:
-git clone https://github.com/your-username/your-repo-name.git
+
 Open the project folder:
 cd your-repo-name
 Run the project:
