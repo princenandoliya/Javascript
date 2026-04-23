@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#productlist{
+    min-height: 300px;
+    width: 100%;
+}
+#productlist img{
+    height: 40vh;
+}
