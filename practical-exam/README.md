@@ -83,18 +83,7 @@ project-folder/
 
 ---
 
-## ⚠️ Known Issues
 
-* Typo in input ID:
-
-  ```
-  updateroductprice ❌
-  updateproductprice ✅
-  ```
-* Total price display is present but not fully implemented
-* No validation for image URLs
-
----
 
 ## 📌 Future Improvements
 
@@ -121,7 +110,7 @@ This project is open-source and free to use.
 
 ## 👨‍💻 Author
 
-Developed as a practice project to strengthen JavaScript fundamentals.
+price
 
 ---
 
