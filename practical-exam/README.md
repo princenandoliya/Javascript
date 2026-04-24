@@ -110,7 +110,7 @@ This project is open-source and free to use.
 
 ## 👨‍💻 Author
 
-price
+prince
 
 ---
 
