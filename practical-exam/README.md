@@ -1,65 +1,128 @@
-🛒 Simple Product Listing App
+# 🛒 Shopping Cart Web App
 
-This is a basic product listing web application built using HTML, Bootstrap, and JavaScript. It displays products in a responsive grid with options to add, edit, delete, and search items.
+A simple and interactive shopping cart application built using **HTML**, **CSS**, **Bootstrap**, and **JavaScript**. This project demonstrates core front-end concepts like DOM manipulation, local storage, and dynamic UI updates.
 
-Live Link : https://exam-101.netlify.app/
+Live Link : https://practical-exam-11.netlify.app/
 
-📌 Features
-📦 Display product list in card layout
-➕ Add products (UI button present)
-🛒 Add to cart (function hook available)
-✏️ Edit product (function hook available)
-❌ Delete product
-🔍 Search bar UI
-📱 Fully responsive using Bootstrap
+## 🚀 Features
 
+* 📦 Display product list dynamically
+* 🛒 Add products to cart
+* ➕ Increase / ➖ Decrease quantity
+* ❌ Remove items from cart
+* ✏️ Update product details (Edit feature)
+* 🗑️ Delete products
+* 🔄 Sort products (Low → High / High → Low)
+* 💾 Persistent cart using **Local Storage**
+* 🧾 Checkout functionality with alert
+* 📊 Auto calculation of total price (UI ready)
 
-🛠️ Technologies Used
-HTML5
-CSS3
-Bootstrap 5
-JavaScript (Vanilla JS)
+---
 
+## 🛠️ Technologies Used
 
-📂 Project Structure
+* HTML5
+* CSS3
+* Bootstrap 5
+* Vanilla JavaScript
+
+---
+
+## 📂 Project Structure
+
+```
 project-folder/
 │
 ├── index.html     # Main HTML file
-├── style.css      # Custom styles
-├── index.js       # JavaScript logic
+├── style.css      # Custom styling
+├── index.js       # Application logic
 └── README.md      # Project documentation
+```
 
+---
 
-🚀 Getting Started
-Clone the repository:
+## ⚙️ How It Works
 
-Open the project folder:
-cd your-repo-name
-Run the project:
-Open index.html in your browser
+### Product Listing
 
+* Products are stored in a JavaScript array.
+* Rendered dynamically using DOM manipulation.
 
-📸 UI Overview
-Products are displayed in Bootstrap cards
-Each card contains:
-Product Image
-Name
-Price
-Action Buttons
+### Cart System
 
-🔮 Future Enhancements
-Implement Add to Cart functionality
-Add product form modal
-Implement Edit feature
-Add Local Storage support
-Improve search functionality
-Add product categories & filters
+* Items added to cart are stored in **localStorage**.
+* Quantity updates automatically if item already exists.
 
+### Update Product
 
-👨‍💻 Author
+* Bootstrap modal is used to edit product details.
 
-prince
+### Sorting
 
-📄 License
+* Users can sort products by price:
 
-This project is open source and available under the MIT License.
+  * Low to High
+  * High to Low
+
+### Checkout
+
+* Displays alert when:
+
+  * Cart is empty ❌
+  * Order is placed ✅
+
+---
+
+## 🧠 Key Concepts Covered
+
+* Array methods (`map`, `filter`, `find`, `sort`)
+* Event handling
+* Local storage usage
+* Dynamic HTML rendering
+* Bootstrap modal integration
+
+---
+
+## ⚠️ Known Issues
+
+* Typo in input ID:
+
+  ```
+  updateroductprice ❌
+  updateproductprice ✅
+  ```
+* Total price display is present but not fully implemented
+* No validation for image URLs
+
+---
+
+## 📌 Future Improvements
+
+* Add search functionality
+* Improve UI/UX design
+* Add product categories
+* Implement real checkout page
+* Add user authentication
+* Display total price dynamically
+
+---
+
+## 📸 Demo Preview
+
+> Add screenshots or GIF here for better presentation
+
+---
+
+## 📃 License
+
+This project is open-source and free to use.
+
+---
+
+## 👨‍💻 Author
+
+Developed as a practice project to strengthen JavaScript fundamentals.
+
+---
+
+⭐ Feel free to fork, modify, and enhance this project!
