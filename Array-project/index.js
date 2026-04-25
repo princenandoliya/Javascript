@@ -68,6 +68,19 @@ function pushMethod() {
     showOutput(arr);
 }
 
+function popMethod() {
+    let arr = getValues();
+    arr.pop();
+
+    showOutput(arr);
+}
+function shiftMethod() {
+    let arr = getValues();
+    arr.shift();
+
+    showOutput(arr);
+}
+
 function showOutput(data) {
     let out = document.getElementById("output");
 
