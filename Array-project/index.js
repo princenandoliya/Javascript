@@ -124,4 +124,76 @@ function findMethod() {
     let result = arr.find(num => num > value);
 
     showOutput(result);
+}   
+
+function slicemethod() {
+    let arr = getValues();
+
+    let start = Number(prompt("Enter start index"));
+    let end = Number(prompt("Enter end index"));
+
+    let result = arr.slice(start, end);
+
+    showOutput(result);
+}
+function somemethod() {
+    let arr = getValues().map(Number); 
+
+    let value = Number(prompt("Enter number to check greater than"));
+
+    let result = arr.some(num => num > value);
+
+    showOutput(result);
+}
+
+function indexOfmethod() {
+    let arr = getValues();
+
+    let value = prompt("Enter value to find index");
+
+    let result = arr.indexOf(value);
+
+    showOutput(result);
+}
+
+function sortmethod() {
+    let arr = getValues().map(Number);
+
+    arr.sort((a, b) => a - b);
+
+    showOutput(arr);
+}
+
+function mapmethod() {
+    let arr = getValues().map(Number);
+
+    let result = arr.map(num => num * 2); 
+
+    showOutput(result);
+}
+
+function filtermethod() {
+    let arr = getValues().map(Number);
+
+    let value = Number(prompt("Enter number to filter greater than"));
+
+    let result = arr.filter(num => num > value);
+
+    showOutput(result);
+}
+
+function reducemethod() {
+    let arr = getValues().map(Number);
+
+    let result = arr.reduce((all, num) => all + num, 0);
+
+    showOutput(result);
+}
+
+function descending() {
+    let arr = getValues().map(Number);
+
+    arr.sort((a, b) => b - a);
+
+    showOutput(arr);
 }
