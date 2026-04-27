@@ -59,6 +59,15 @@ function getValues() {
     }
     return arr;
 }
+function showOutput(data) {
+    let out = document.getElementById("output");
+
+    if (Array.isArray(data)) {
+        out.innerHTML = `output:- ${data.join(" , ")}`;
+    } else {
+        out.innerHTML = data;
+    }
+}
 
 function pushMethod() {
     let arr = getValues();
@@ -81,12 +90,38 @@ function shiftMethod() {
     showOutput(arr);
 }
 
-function showOutput(data) {
-    let out = document.getElementById("output");
+function unshiftmethod(){
+    let arr = getValues();
+    let newItem = prompt("Enter New Items");
+    arr.unshift(newItem)
 
-    if (Array.isArray(data)) {
-        out.innerHTML = `output:- ${data.join(" , ")}`;
-    } else {
-        out.innerHTML = data;
-    }
+
+    showOutput(arr)
+}
+
+function reversemethod(){
+    let  arr = getValues()
+
+    arr.reverse();
+
+    showOutput(arr)
+}
+function includesMethod() {
+    let arr = getValues();
+
+    let value = prompt("Enter value to check");
+
+    let result = arr.includes(value);
+
+    showOutput(result);
+}
+
+function findMethod() {
+    let arr = getValues();
+
+    let value = Number(prompt("Enter number to find greater than"));
+
+    let result = arr.find(num => num > value);
+
+    showOutput(result);
 }
